@@ -25,18 +25,15 @@ export default class BaiTapThucHanhLayOut extends Component {
         <div className="mb-4">
           <div className="container">
             <div className="row">
-              <div className="col">
-                <Item />
-              </div>
-              <div className="col">
-                <Item />
-              </div>
-              <div className="col">
-                <Item />
-              </div>
-              <div className="col">
-                <Item />
-              </div>
+              {Array(4)
+                .fill()
+                .map((item, index) => {
+                  return (
+                    <div className="col" key={index}>
+                      <Item />
+                    </div>
+                  )
+                })}
             </div>
           </div>
         </div>
